@@ -18,6 +18,7 @@ def index():
 def params(category='default category', id=1):
     return render_template('params.html', category=category, id=id, rango=range(0, id))
 
+
 # configs
 HOST = '0.0.0.0'
 PORT = 8000

@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
+    <title>{% block title %}hello{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+    <img src="{{ url_for('static', filename='img/lab.png') }}" width="40px" style="float:left" alt="">
     {% include '_header.html' %}
     {% block content %}
 
     {% endblock content %}
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
