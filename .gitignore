@@ -1,0 +1,11 @@
+.DS_Store
+*.pyc
+*.pyo
+*.swp
+
+*.db
+
+virtualenv
+*.sublime-project
+*.sublime-workspace
+*.log
