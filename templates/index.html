@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    {% from "utils/_macros.html" import render_field %}
+    <form action="" method="POST">
+        {% for field in form %}
+            {{ render_field(field, class='myinputclass') }}
+        {% endfor %}
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock %}

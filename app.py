@@ -2,6 +2,8 @@ from flask import Flask
 from flask import request
 from flask import render_template
 
+import forms
+
 # crear instancia
 app = Flask(__name__)  # por defecto template_folder="templates"
 
@@ -9,7 +11,8 @@ app = Flask(__name__)  # por defecto template_folder="templates"
 # router
 @app.route('/')
 def index():
-    return render_template('base.html')
+    comment_form = forms.CommentForm()
+    return render_template('index.html', form=comment_form)
 
 # /params/category/id
 @app.route('/params/')
