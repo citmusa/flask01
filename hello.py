@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import request
 
 # crear instancia
 app = Flask(__name__)
@@ -9,6 +10,11 @@ app = Flask(__name__)
 def index():
     return 'hola'
 
+# /params?p1=hola
+@app.route('/params')
+def params():
+    param = request.args.get('p1', 'no hay nada')
+    return 'Params - p1: {} '.format(param)
 
 # configs
 HOST = '0.0.0.0'
