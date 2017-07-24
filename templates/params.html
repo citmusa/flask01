@@ -3,4 +3,10 @@
 {% block content %}
     <p>Esto es lo que pides:</p>
     <p><b>categoría:</b> {{category}}  - <b>id:</b> {{id}}</p>
+    <ul>
+        {% for cuenta in rango %}
+            <li>{{category}} - {{cuenta +1}} </li>
+        {% endfor %}
+    </ul>
+
 {% endblock content %}
