@@ -11,3 +11,7 @@ pip install -r requirements.txt
 # start server
 python hello.py
 ```
+
+### Gotchas
+
+* Flask uses Jinja2 as template language
