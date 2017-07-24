@@ -10,11 +10,12 @@ app = Flask(__name__)
 def index():
     return 'hola'
 
-# /params?p1=hola
-@app.route('/params')
-def params():
-    param = request.args.get('p1', 'no hay nada')
-    return 'Params - p1: {} '.format(param)
+# /params/category/id
+@app.route('/params/')
+@app.route('/params/<category>/')
+@app.route('/params/<category>/<int:id>')
+def params(category='default category', id=1):
+    return 'CAT: {}; ID:{} '.format(category, id)
 
 # configs
 HOST = '0.0.0.0'
