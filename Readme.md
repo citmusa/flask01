@@ -9,7 +9,49 @@ This code is from codigofacilito.
 ```
 pip install -r requirements.txt
 # start server
-python hello.py
+python app.py
+```
+
+####Procfile
+
+Explicitly declare what command should be executed to start your app.
+
+## Run
+```
+# way1
+python app.py
+
+# way2
+export FLASK_APP=app.py
+python -m flask run
+
+# way3
+gunicorn app:app
+
+```
+
+##Deploy (heroku)
+```
+heroku create
+git push heroku master
+heroku ps:scale web=1
+heroku open
+```
+
+##Log
+```
+heroku logs --tail
+```
+
+##Run the app locally
+```
+heroku local web
+```
+
+###get config
+```
+heroku config
+heroku config:set VARNAME=2
 ```
 
 ### Gotchas

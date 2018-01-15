@@ -1,3 +1,6 @@
+import os
+from datetime import datetime
+
 from flask import Flask
 from flask import request
 from flask import render_template
@@ -10,6 +13,13 @@ app = Flask(__name__)  # por defecto template_folder="templates"
 
 # router
 @app.route('/')
+def homepage():
+	time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
+	os_var = os.environ.get('OS_VAR', 'not set')
+	return render_template('home.html', time=time, os_var=os_var)
+
+
+@app.route('/form/')
 def index():
     comment_form = forms.CommentForm()
     return render_template('index.html', form=comment_form)
