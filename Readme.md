@@ -60,6 +60,12 @@ heroku config
 heroku config:set VARNAME=2
 ```
 
+### Docs
+
+	Addons [https://elements.heroku.com/addons/]
+	Documentation [https://devcenter.heroku.com/]
+
+
 ### Gotchas
 
 * Flask uses Jinja2 as template language
