@@ -30,9 +30,15 @@ gunicorn app:app
 
 ```
 
+## Heroku client (macOS)
+```
+brew install heroku
+```
+
 ##Deploy (heroku)
 ```
-heroku create
+(cd into project)
+heroku create [appname]
 git push heroku master
 heroku ps:scale web=1
 heroku open
